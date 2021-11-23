@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+    .emoji{
+      width:160px;
+      height:160px;
+      display: inline-block;
+      position: relative;
+      background: url('images/emoji2.png');
+  }
+  .emoji-m{
+    width:160px;
+    height:160px;
+    display: block;
+    position: absolute;
+    left:0;
+    top:0;
+    background: url('images/emoji2.png');
+    background-position: -160px;
+  }
+  .emoji-e{
+    width:160px;
+    height:160px;
+    display: block;
+    position: absolute;
+    background: url('images/emoji2.png');
+    background-position: -970px;
+}
+.smile{
+  animation: smile 2s steps(1) alternate infinite;
+}
+.blink{
+animation: blink 2s steps(1) alternate infinite;
+}
+
+@keyframes smile {
+  0%{background-position: -160px top;}
+  16%{background-position: -320px top;}
+  36%{background-position: -472px top;}
+  52%{background-position: -643px top;}
+  68%{background-position: -800px top;}
+
+}
+
+@keyframes blink {
+  0%{background-position: 820px top;}
+  16%{background-position: 660px top;}
+  36%{background-position: 510px top;}
+  52%{background-position: 343px top;}
+  68%{background-position: 172px top;}
+}
+    </style>
+  </head>
+  <body>
+    <div class="emoji">
+      <div class="emoji-m smile"></div>
+      <div class="emoji-e blink"></div>
+    </div>
+  </body>
+</html>
